@@ -1,0 +1,5 @@
+import type { FormValues } from '../schema';
+export default function Summary({ data, onEdit }: { data: FormValues; onEdit?: (step: number) => void }) {
+  const groups = [{ title: 'Personal details', rows: [['Full name', data.fullName], ['Email', data.email], ['Phone', data.phone]] }, { title: 'Company', rows: [['Company name', data.companyName], ['Team size', data.teamSize], ['Website', data.website || 'Not provided']] }, { title: 'Preferences', rows: [['Services', data.services.join(', ')], ['Budget', data.budget], ['Notes', data.notes || 'Not provided'], ['Demo acknowledgement', data.consent ? 'Accepted' : 'Not accepted']] }];
+  return <div className="summary">{groups.map((group, i) => <section key={group.title}><div className="summary-heading"><h3>{group.title}</h3>{onEdit && <button type="button" className="text-button" onClick={() => onEdit(i)} aria-label={`Edit ${group.title.toLowerCase()}`}>Edit</button>}</div><dl>{group.rows.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></section>)}</div>;
+}
