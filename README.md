@@ -55,7 +55,9 @@ src/
 
 ## Screenshot
 
-> Screenshot placeholder: add `docs/screenshot.png` showing the desktop onboarding flow. A mobile screenshot at 375px is also recommended.
+<img width="1899" height="907" alt="image" src="https://github.com/user-attachments/assets/8f61eb2b-51d1-401d-820b-e1bec9831857" />
+<img width="371" height="822" alt="image" src="https://github.com/user-attachments/assets/6d0a481e-30c6-40cb-803d-bc07dfd167c0" />
+
 
 ## Production
 
